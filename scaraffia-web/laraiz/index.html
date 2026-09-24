@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Raíz — Scaraffia Wines</title>
+<meta name="theme-color" content="#E6D9C4">
+<meta name="description" content="La Raíz, Malbec de Medrano, Mendoza. Scaraffia Wines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --grafito: #4A1E26;
+    --grafito-2: #5A2A32;
+    --grafito-3: #38161C;
+    --linea: #6B4A50;
+    --texto: #E6D9C4;
+    --gris: #C2B39F;
+    --oro: #C4A574;
+    --oliva: #8C7C6C;
+    --oro-claro: #D4BC93;
+    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans: 'Hanken Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { overflow-x: hidden; -webkit-text-size-adjust: 100%; background: var(--grafito); }
+  body {
+    margin: 0;
+    background: var(--grafito);
+    color: var(--texto);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  img { max-width: 100%; display: block; }
+  a { color: var(--oro-claro); }
+  :focus-visible { outline: 2px solid var(--oro-claro); outline-offset: 3px; }
+
+  .wrap { max-width: 640px; margin: 0 auto; padding: 0 24px; }
+
+  .marca {
+    padding: 28px 0 0;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.24em;
+    text-align: center;
+    color: var(--oro);
+  }
+
+  .hero { padding: 56px 0 40px; text-align: center; }
+  .hero h1 {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(40px, 11vw, 68px);
+    line-height: 1.05;
+    letter-spacing: 0.14em;
+    padding-left: 0.14em;
+    text-transform: uppercase;
+    color: var(--oro);
+  }
+  .hero p { margin: 22px 0 0; color: var(--gris); font-size: 16px; }
+
+  .obra {
+    margin: 0 auto;
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    max-width: 420px;
+    background: var(--grafito-2);
+    border: 1px dashed #8C7C6C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    color: var(--gris);
+    font-size: 15px;
+  }
+  .obra-img { margin: 0 auto; max-width: 480px; }
+  .obra-img img { width: 100%; height: auto; }
+  .artista-nombre { margin: 0 0 16px; font-family: var(--serif); font-weight: 500; font-size: 26px; letter-spacing: 0.1em; color: var(--oro); }
+  .gris { color: var(--gris); }
+  .enlace { display: inline-flex; align-items: center; min-height: 44px; color: var(--oro-claro); text-decoration: none; border-bottom: 1px solid var(--oro); font-weight: 500; }
+  .enlace:hover { color: var(--texto); }
+  .enlaces { display: flex; flex-wrap: wrap; gap: 8px 32px; }
+  .obra-pie { text-align: center; color: var(--gris); font-size: 14px; margin: 12px 0 0; }
+
+  section { padding: 56px 0; border-top: 1px solid var(--linea); }
+  section:first-of-type { border-top: 0; }
+  h2 {
+    margin: 0 0 20px;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.15;
+    color: var(--texto);
+  }
+  p { margin: 0 0 16px; }
+
+  dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 12px 24px; }
+  dt { color: var(--gris); }
+  dd { margin: 0; }
+
+  .ph {
+    background: rgba(196, 165, 116, 0.18);
+    color: var(--oro-claro);
+    padding: 0 4px;
+    border-radius: 3px;
+  }
+
+  .boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px;
+    background: var(--oro);
+    color: var(--grafito-3);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 999px;
+    border: 0;
+    font-family: var(--sans);
+    font-size: 17px;
+    cursor: pointer;
+  }
+  .boton:hover { background: var(--oro-claro); }
+  .boton-sec {
+    background: transparent;
+    color: var(--oro-claro);
+    border: 1px solid var(--oro);
+  }
+  .boton-sec:hover { background: rgba(196, 165, 116, 0.1); }
+  .acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+
+  footer {
+    padding: 40px 0 48px;
+    border-top: 1px solid var(--linea);
+    text-align: center;
+    font-size: 14px;
+    color: var(--gris);
+  }
+  footer strong { display: block; color: var(--texto); font-weight: 500; margin-bottom: 8px; }
+
+  .edad {
+    position: fixed;
+    inset: 0;
+    background: var(--grafito-3);
+    color: var(--texto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 10;
+    text-align: center;
+  }
+  .edad { background: var(--oliva); }
+  .edad[hidden] { display: none; }
+  .edad-caja { max-width: 360px; }
+  .edad .marca { padding: 0 0 40px; }
+  .edad h2 { font-size: 38px; }
+  .edad p { color: var(--gris); }
+  .edad .acciones { justify-content: center; }
+
+  .hero h1 { opacity: 0; transform: translateY(12px); transition: opacity 900ms ease, transform 900ms ease; }
+  .listo .hero h1 { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .hero h1 { transition: none; opacity: 1; transform: none; }
+  }
+
+  .lema { margin: 0 0 32px; font-family: var(--serif); font-style: italic; font-size: 28px; line-height: 1.25; color: var(--oro); }
+  .relato { font-family: var(--serif); font-size: 21px; line-height: 1.65; }
+  .relato h3 { margin: 0 0 18px; font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 30px; color: var(--oro); }
+  .relato p { margin: 0 0 18px; }
+  details summary {
+    display: inline-flex; align-items: center; min-height: 44px; cursor: pointer;
+    font-family: var(--sans); font-size: 16px; font-weight: 500; color: var(--oro-claro);
+    list-style: none; border-bottom: 1px solid var(--oro); margin-bottom: 18px;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details[open] summary { display: none; }
+
+
+  /* Paleta ciruela, taupe y crema */
+  .edad { background: #38161C; }
+  .edad .marca { color: var(--oro); }
+  .boton { background: var(--oro); color: #38161C; }
+  .boton-sec { background: transparent; color: #E6D9C4; border-color: #8C7C6C; }
+  .boton-sec:hover { background: rgba(140, 124, 108, 0.18); }
+  section + section, section, footer { border-top-color: rgba(140, 124, 108, 0.45); }
+
+  /* Fondo crema con bordó y dorado */
+  :root {
+    color-scheme: light;
+    --texto: #38161C;
+    --gris: #675A4D;
+  }
+  html, body { background: #E6D9C4; }
+  body { color: #38161C; }
+  .marca { color: #7A6139; }
+  .hero h1, .relato h3, .artista-nombre, .lema { color: #8F7449; }
+  h2 { color: #4A1E26; }
+  dt, .gris, .hero p, .obra-pie { color: #675A4D; }
+  a, .enlace, details summary { color: #4A1E26; }
+  .enlace, details summary { border-bottom-color: #8F7449; }
+  .enlace:hover { color: #8F7449; }
+  section, section + section, footer { border-top-color: #CDBDA5; }
+  footer { color: #675A4D; }
+  footer strong { color: #38161C; }
+  .ph { background: rgba(143, 116, 73, 0.16); color: #6E5530; }
+  .boton { background: #4A1E26; color: #E6D9C4; }
+  .boton:hover { background: #38161C; }
+  .boton-sec { background: transparent; color: #4A1E26; border: 1px solid #4A1E26; }
+  .boton-sec:hover { background: rgba(74, 30, 38, 0.06); }
+  :focus-visible { outline-color: #4A1E26; }
+  .obra-img img { box-shadow: 0 18px 40px rgba(56, 22, 28, 0.25); }
+  /* La pantalla de edad queda en bordó, como la puerta de entrada */
+  .edad { background: #4A1E26; color: #E6D9C4; }
+  .edad .marca { color: #C4A574; }
+  .edad h2 { color: #E6D9C4; }
+  .edad p { color: #CDBFA9; }
+  .edad .boton { background: #C4A574; color: #38161C; }
+  .edad .boton:hover { background: #D4BC93; }
+  .edad .boton-sec { color: #E6D9C4; border-color: #CDBFA9; }
+  .edad :focus-visible { outline-color: #E6D9C4; }
+
+  @media (max-width: 520px) {
+    .marca { font-size: 15px; letter-spacing: 0.2em; }
+    .acciones { flex-direction: column; align-items: stretch; }
+    dl { gap: 10px 16px; }
+  }
+  @media (min-width: 1024px) {
+    /* Obra fija a la izquierda, el texto se mueve a la derecha */
+    body { padding-left: 46vw; }
+    header.wrap, main.wrap, footer .wrap { max-width: 700px; padding: 0 64px; }
+    .hero { padding-top: 72px; }
+    .col-obra {
+      position: fixed;
+      top: 0; bottom: 0; left: 0;
+      width: 46vw;
+      background: #4A1E26;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px;
+      z-index: 1;
+    }
+    .obra-img { max-width: 100%; height: calc(100vh - 150px); margin: 0; }
+    .obra-img img { height: 100%; width: auto; max-width: 100%; object-fit: contain; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); }
+    .obra-pie { color: #CDBFA9; margin-top: 20px; }
+    .obra-pie a { color: #D4BC93; }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="edad" id="edad" role="dialog" aria-modal="true" aria-labelledby="edad-titulo">
+  <div class="edad-caja">
+    <div class="marca">SCARAFFIA WINES</div>
+    <div id="edad-pregunta">
+      <h2 id="edad-titulo">¿Sos mayor de 18 años?</h2>
+      <p>Para entrar tenés que tener la edad legal para tomar alcohol.</p>
+      <div class="acciones">
+        <button class="boton" id="edad-si" type="button">Sí, soy mayor</button>
+        <button class="boton boton-sec" id="edad-no" type="button">No</button>
+      </div>
+    </div>
+    <div id="edad-rechazo" hidden>
+      <h2>Te esperamos más adelante</h2>
+      <p>Este sitio es solo para mayores de 18 años.</p>
+    </div>
+  </div>
+</div>
+
+<header class="wrap">
+  <div class="marca"><a href="../" style="color: inherit; text-decoration: none;">SCARAFFIA WINES</a></div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>La Raíz</h1>
+    <p>Malbec de Mendoza</p>
+  </div>
+
+  <div class="col-obra">
+  <figure class="obra-img">
+    <img src="../img/obra-la-raiz.jpg" width="1400" height="1887" alt="Pintura de Guillermo D’Anna: un hombre desnudo duerme recostado al pie de un árbol del que cuelga una manzana roja, bajo un cielo de nubes naranjas y una luna pequeña. Una cinta dorada cruza la escena con la frase: Entonces hizo caer sobre el hombre un sueño profundo.">
+  </figure>
+  <p class="obra-pie">Obra de <a href="https://www.instagram.com/guille.danna.art/" rel="noopener">Guillermo D’Anna</a>, de Mendoza.</p>
+  </div>
+
+  <div class="col-texto">
+
+
+  <section aria-labelledby="t-etiqueta">
+    <h2 id="t-etiqueta">Historia de la etiqueta</h2>
+    <div class="relato">
+      <h3>El origen</h3>
+      <p>Siete largos días con sus siete largas noches llegaron a su fin. El cansancio lo tumbó bajo un árbol de frutas, y el sueño cerró sus ojos. Había pasado las últimas horas solo, revelando los nombres de los animales.</p>
+      <details>
+        <summary>Seguir leyendo</summary>
+        <p>—Ese será un perro —dijo señalando a una criatura de cuatro patas—. Porque me recordará a Lélape y los galgos del Sur… y aquel otro será un caballo, porque me recordará al ecuestre Napoleón, a Marcos Aurelio, al infame Huno…</p>
+        <p>En ese momento una luz invisible bajó del sol atravesando el cielo hacia él. Adán, paralizado, podía percibir esa luz, y a él mismo. Podía verse a sí mismo desde afuera. Él como un espectador de sí.</p>
+        <p>Su respiración pesaba. Cualquier esfuerzo por mover los labios o los dedos era en vano. La luz, que ahora era un rayo, entraba lentamente en su cuerpo pulverizando una de sus costillas.</p>
+        <p>Él, que hasta entonces era uno solo, se dividió así en dos. Vio su propia carne, sus propios huesos, dividirse.</p>
+        <p>Ambas partes se miraron. Ambos, que compartían una misma memoria, se miraban como quien se ve en el reflejo del agua. Ambos pensaban que el otro era el reflejo.</p>
+        <p>El extraño nacimiento de otro. La simultánea creación del yo y del otro. Una diferencia primero sutil y luego enorme.</p>
+        <p>En los sueños, un tigre puede ser simultáneamente un caballo, sin ser una mezcla de un tigre con un caballo. De esa misma manera, ese yo y ese otro engendraron sin darse cuenta un otro, y luego otro. Con ellos nació la envidia y luego la muerte. Con la muerte nacieron otros y otros y otros.</p>
+        <p>Y esa descendencia vagó por los pasillos oscuros y profundos del inmenso laberinto del mundo. Engendrando así, primero los mitos y luego la Historia, la frágil paz y la inevitable guerra, los cultos y la ciencia.</p>
+        <p>Hay quienes hoy, entre tantos que poblaron la tierra, miran hacia atrás, más allá de Napoleón, de Huno y de Marcos Aurelio, más allá del terrible Moisés y del gran arca. Hay quienes hoy se preguntan si aquel hombre que durmió bajo aquel árbol de frutas no seguirá acaso dormido.</p>
+      </details>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-artista">
+    <h2 id="t-artista">El artista</h2>
+    <p class="artista-nombre">Guillermo D’Anna</p>
+    <p><span class="ph">[BIO: de dónde es, cómo trabaja, en qué se inspira. Idealmente escrita por él, en tres o cuatro líneas]</span></p>
+    <p>Para La Raíz pintó el momento de <em>El origen</em> en que Adán duerme bajo el árbol de frutas, justo antes de dividirse en dos. La cinta dorada que cruza la obra lo anuncia: «Entonces hizo caer sobre el hombre un sueño profundo...».</p>
+    <p class="gris">Técnica: <span class="ph">[TÉCNICA Y MEDIDAS DE LA OBRA]</span></p>
+    <div class="enlaces">
+      <a class="enlace" href="https://guillermodannaart.wordpress.com/" rel="noopener">Su sitio web</a>
+      <a class="enlace" href="https://www.instagram.com/guille.danna.art/" rel="noopener">Su Instagram</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-representa">
+    <h2 id="t-representa">Qué representa La Raíz</h2>
+    <p>La Raíz es nuestra primera línea, y por eso quisimos dedicarla a la primera etapa de todo proceso: el origen. Ese lugar donde algo nace y toma forma antes de mostrarse.</p>
+    <p>Como la raíz de la vid, que no se ve, pero sostiene todo lo que viene después.</p>
+  </section>
+
+  <section aria-labelledby="t-vino">
+    <h2 id="t-vino">El vino</h2>
+    <dl>
+      <dt>Varietal</dt><dd>Malbec</dd>
+      <dt>Origen</dt><dd>Medrano, Mendoza</dd>
+      <dt>Añada</dt><dd>2025</dd>
+      <dt>Crianza</dt><dd>Roble francés</dd>
+      <dt>Alcohol</dt><dd>14,5 % vol.</dd>
+      <dt>Edición</dt><dd>1.000 botellas</dd>
+    </dl>
+  </section>
+
+  <section aria-labelledby="t-tomar">
+    <h2 id="t-tomar">Cómo tomarlo</h2>
+    <p>Rodeado de buena compañía.</p>
+    <p>Servilo entre 16 y 18 °C.</p>
+    <p>Acompañalo con un asado entre amigos, carnes a la parrilla, empanadas o quesos estacionados.</p>
+  </section>
+
+  <section aria-labelledby="t-pedidos">
+    <h2 id="t-pedidos">¿Querés más botellas?</h2>
+    <p>Escribime y coordinamos el pedido.</p>
+    <div class="acciones">
+      <a class="boton" href="https://wa.me/549XXXXXXXXXX?text=Hola%20Mati%2C%20quiero%20pedir%20La%20Ra%C3%ADz" rel="noopener">Pedir por WhatsApp</a>
+      <a class="boton boton-sec" href="https://www.instagram.com/scaraffiawines/" rel="noopener">Ver Instagram</a>
+    </div>
+  </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="lema">El vino como excusa para reunirse.</p>
+    <strong>Beber con moderación. Prohibida su venta a menores de 18 años.</strong>
+    Scaraffia Wines, Mendoza, Argentina
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var CLAVE = 'scaraffia-mayor-edad';
+    var edad = document.getElementById('edad');
+    var body = document.body;
+
+    function entrar() {
+      edad.hidden = true;
+      body.style.overflow = '';
+      requestAnimationFrame(function () { body.classList.add('listo'); });
+    }
+
+    var confirmado = false;
+    try { confirmado = localStorage.getItem(CLAVE) === 'si'; } catch (e) {}
+
+    if (confirmado) {
+      entrar();
+    } else {
+      body.style.overflow = 'hidden';
+      document.getElementById('edad-si').focus();
+    }
+
+    document.getElementById('edad-si').addEventListener('click', function () {
+      try { localStorage.setItem(CLAVE, 'si'); } catch (e) {}
+      entrar();
+    });
+
+    document.getElementById('edad-no').addEventListener('click', function () {
+      document.getElementById('edad-pregunta').hidden = true;
+      document.getElementById('edad-rechazo').hidden = false;
+    });
+  })();
+</script>
+</body>
+</html>
