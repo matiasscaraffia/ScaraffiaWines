@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>La Raíz — Scaraffia Wines</title>
 <meta name="theme-color" content="#E6D9C4">
-<meta name="description" content="La Raíz, Malbec de Medrano, Mendoza. Scaraffia Wines.">
+<meta name="description" content="La Raíz, Malbec de Mendoza. Scaraffia Wines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
@@ -46,13 +46,13 @@
     padding: 28px 0 0;
     font-family: var(--serif);
     font-weight: 600;
-    font-size: 17px;
+    font-size: 32px;
     letter-spacing: 0.24em;
     text-align: center;
     color: var(--oro);
   }
 
-  .hero { padding: 56px 0 40px; text-align: center; }
+  .hero { padding: 10px 0 40px; text-align: center; }
   .hero h1 {
     margin: 0;
     font-family: var(--serif);
@@ -85,6 +85,7 @@
   .obra-img img { width: 100%; height: auto; }
   .artista-nombre { margin: 0 0 16px; font-family: var(--serif); font-weight: 500; font-size: 26px; letter-spacing: 0.1em; color: var(--oro); }
   .gris { color: var(--gris); }
+  .cita { margin: 1.2em 0; padding-left: 1em; border-left: 2px solid #C4A574; }
   .enlace { display: inline-flex; align-items: center; min-height: 44px; color: var(--oro-claro); text-decoration: none; border-bottom: 1px solid var(--oro); font-weight: 500; }
   .enlace:hover { color: var(--texto); }
   .enlaces { display: flex; flex-wrap: wrap; gap: 8px 32px; }
@@ -202,7 +203,7 @@
   }
   html, body { background: #E6D9C4; }
   body { color: #38161C; }
-  .marca { color: #7A6139; }
+  .marca { color: #8F7449; }
   .hero h1, .relato h3, .artista-nombre, .lema { color: #8F7449; }
   h2 { color: #4A1E26; }
   dt, .gris, .hero p, .obra-pie { color: #675A4D; }
@@ -230,7 +231,7 @@
   .edad :focus-visible { outline-color: #E6D9C4; }
 
   @media (max-width: 520px) {
-    .marca { font-size: 15px; letter-spacing: 0.2em; }
+    .marca { font-size: 26px; letter-spacing: 0.2em; }
     .acciones { flex-direction: column; align-items: stretch; }
     dl { gap: 10px 16px; }
   }
@@ -238,7 +239,7 @@
     /* Obra fija a la izquierda, el texto se mueve a la derecha */
     body { padding-left: 46vw; }
     header.wrap, main.wrap, footer .wrap { max-width: 700px; padding: 0 64px; }
-    .hero { padding-top: 72px; }
+    .hero { padding-top: 14px; }
     .col-obra {
       position: fixed;
       top: 0; bottom: 0; left: 0;
@@ -322,9 +323,9 @@
   <section aria-labelledby="t-artista">
     <h2 id="t-artista">El artista</h2>
     <p class="artista-nombre">Guillermo D’Anna</p>
-    <p><span class="ph">[BIO: de dónde es, cómo trabaja, en qué se inspira. Idealmente escrita por él, en tres o cuatro líneas]</span></p>
+    <p>Pintor mendocino. Su obra se mueve entre el realismo mágico y el simbolismo y busca evocar la fuerza de los grandes mitos: toma temas, símbolos y personajes de la mitología y la literatura y los cruza con su propio mundo interior. Trabaja al óleo, con especial interés por la técnica, los materiales tradicionales y la figura humana.</p>
+    <blockquote class="gris cita"><em>«Vi a los mitos llegando a nosotros desde lo lejos, siempre dispuestos a significar, resignificar.»</em></blockquote>
     <p>Para La Raíz pintó el momento de <em>El origen</em> en que Adán duerme bajo el árbol de frutas, justo antes de dividirse en dos. La cinta dorada que cruza la obra lo anuncia: «Entonces hizo caer sobre el hombre un sueño profundo...».</p>
-    <p class="gris">Técnica: <span class="ph">[TÉCNICA Y MEDIDAS DE LA OBRA]</span></p>
     <div class="enlaces">
       <a class="enlace" href="https://guillermodannaart.wordpress.com/" rel="noopener">Su sitio web</a>
       <a class="enlace" href="https://www.instagram.com/guille.danna.art/" rel="noopener">Su Instagram</a>
@@ -341,7 +342,6 @@
     <h2 id="t-vino">El vino</h2>
     <dl>
       <dt>Varietal</dt><dd>Malbec</dd>
-      <dt>Origen</dt><dd>Medrano, Mendoza</dd>
       <dt>Añada</dt><dd>2025</dd>
       <dt>Crianza</dt><dd>Roble francés</dd>
       <dt>Alcohol</dt><dd>14,5 % vol.</dd>
@@ -360,7 +360,7 @@
     <h2 id="t-pedidos">¿Querés más botellas?</h2>
     <p>Escribime y coordinamos el pedido.</p>
     <div class="acciones">
-      <a class="boton" href="https://wa.me/549XXXXXXXXXX?text=Hola%20Mati%2C%20quiero%20pedir%20La%20Ra%C3%ADz" rel="noopener">Pedir por WhatsApp</a>
+      <a class="boton" href="https://wa.me/5492612068553?text=Hola%20Mati%2C%20quiero%20pedir%20La%20Ra%C3%ADz" rel="noopener">Pedir por WhatsApp</a>
       <a class="boton boton-sec" href="https://www.instagram.com/scaraffiawines/" rel="noopener">Ver Instagram</a>
     </div>
   </section>
@@ -369,7 +369,7 @@
 
 <footer>
   <div class="wrap">
-    <p class="lema">El vino como excusa para reunirse.</p>
+    <p class="lema">El vino como excusa para reunirse</p>
     <strong>Beber con moderación. Prohibida su venta a menores de 18 años.</strong>
     Scaraffia Wines, Mendoza, Argentina
   </div>
